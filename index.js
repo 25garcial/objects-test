@@ -21,7 +21,7 @@ result.textContent=`${name} resuscitated ${target.name} to 1 health and is now a
 
 	const describe = () => {alert(`My name is ${name} and i have ${hairColor} hair and i am ${age} years old. I am ${race}.`)};
   
-  const fight= (enemy) => {if (enemy.health<1) {let randomNumber = Math.floor(Math.random(1)*21); enemy.health-=randomNumber; if (enemy.health<0){enemy.health=0;} result.textContent=(`${name} has done ${randomNumber} damage to ${enemy.name}. ${enemy.name} has ${enemy.health} health left.`);} else {result.textConent=(`${enemy.name} is dead`); enemy.fight=''} enemy.alive=false}
+  const fight= (enemy) => {if (alive){if (enemy.health>0) {let randomNumber = Math.floor(Math.random(1)*21); enemy.health-=randomNumber; if (enemy.health<0){enemy.health=0;} result.textContent=(`${name} has done ${randomNumber} damage to ${enemy.name}. ${enemy.name} has ${enemy.health} health left.`);} else {result.textConent=(`${enemy.name} is dead`); enemy.alive=false}} else {result.textContent=(`${name} is not alive.`)}}
   
 	return {health, name, age, hairColor, race, describe, fight, alive, resuscitate}
 }
