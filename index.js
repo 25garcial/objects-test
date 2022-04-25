@@ -35,7 +35,7 @@ function human(name, age, hairColor, race, alive) {
           enemy.health = 0;
         }
         result.textContent = (`${name} has done ${randomNumber} damage to ${enemy.name}. ${enemy.name} has ${enemy.health} health left.`);
-      } else if (enemy.health<1) {
+      } else if (enemy.health < 1) {
         result.textContent = (`${enemy.name} is dead`);
         enemy.alive = false
       }
@@ -56,5 +56,19 @@ function human(name, age, hairColor, race, alive) {
     resuscitate
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var bob = human("bob", 45, "gray", "latino", true)
 var john = human("john", 16, "blonde", "japanese", true)
